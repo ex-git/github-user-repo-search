@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Github search</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Search Github user</h1>
+    </header>
+    <main role="main">
+        <form class="searchById">
+            <label for="keyword">Input Keyword</label>
+            <input type="text" id="keyword" name="userID">
+            <button type="submit">Submit</button>
+        </form>
+        <section role="region" aria-live="assertive">
+            <div class="js-result">
+                
+            </div>
+        </section>
+    </main>
+</body>
+</html>
