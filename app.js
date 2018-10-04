@@ -15,8 +15,8 @@ function fetchAPI(name) {
 function renderHTML(source) {
     $('.js-result').empty();
     for(let i=0; i<source.length; i++) {
-        let {description, html_url} = source[i];
-        $('.js-result').append(`<p>${description}<br><a href="${html_url}" target="_blank">${html_url}</a></p>`)
+        let {name, html_url} = source[i];
+        $('.js-result').append(`<p>${name}<br><a href="${html_url}" target="_blank">${html_url}</a></p>`)
     }
     $('.js-result').prop('hidden', false)
 }
