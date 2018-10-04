@@ -8,8 +8,14 @@ function fetchAPI(name) {
             "Accept": "application/vnd.github.mercy-preview+json"})
         };
     fetch(searchURL + '/users/' + name + '/repos', options)
-    .then(response => response.json())
-    .then(responseJson => renderHTML(responseJson)).catch(error => alert("error"))
+    .then(response => {if(response.ok) {
+        return response.json()
+        }
+        else {
+            throw new Error("Something is not right, try it again?")
+        }})
+    .then(responseJson => renderHTML(responseJson))
+    .catch(error => alert(error.message))
 }
 
 function renderHTML(source) {

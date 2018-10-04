@@ -16,12 +16,11 @@
     <main role="main">
         <form class="searchById">
             <label for="keyword">Input Keyword</label>
-            <input type="text" id="keyword" name="userID">
+            <input type="text" id="keyword" required name="userID">
             <button type="submit">Submit</button>
         </form>
-        <section role="region" aria-live="assertive">
+        <section role="region" aria-live="assertive" hidden>
             <div class="js-result">
-                
             </div>
         </section>
     </main>
